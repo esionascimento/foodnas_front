@@ -1,7 +1,7 @@
 import { HeadPage } from '@Components/Head';
 import { Box, Container } from '@mui/material';
 import { Footer } from '@Components/Footer';
-import ComponentNavbar from '@Components/Navbar';
+import { ComponentNavbar } from '@Components/Navbar';
 import { configNavbarTabs } from '@Config/dashboard/index';
 import Grid2 from '@mui/material/Unstable_Grid2';
 
