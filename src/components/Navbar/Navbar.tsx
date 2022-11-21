@@ -14,7 +14,7 @@ const ComponentNavbar = ({ pages }: Props) => {
   return (
     <AppBar component="nav">
       <Toolbar>
-        <Box sx={{ flexGrow: 1, mr: 2, justifyContent: 'end', display: { xs: 'none', md: 'flex' } }}>
+        <Box sx={{ flexGrow: 1, mr: 2, justifyContent: 'end', display: 'flex' }}>
           {pages.map((page: TypesConfigNavbar) => (
             <Button key={page?.text} sx={{ my: 2, color: 'white', display: 'block' }} href={page?.href}>
               {page?.text}
