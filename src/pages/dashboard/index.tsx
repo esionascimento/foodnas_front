@@ -1,11 +1,11 @@
-import { HeadPage } from '@Components/Head';
-import { Box, Container } from '@mui/material';
 import { Footer } from '@Components/Footer';
+import { HeadPage } from '@Components/Head';
 import { ComponentNavbar } from '@Components/Navbar';
 import { configNavbarTabs } from '@Config/dashboard/index';
+import { Box, Container } from '@mui/material';
 import Grid2 from '@mui/material/Unstable_Grid2';
 
-const Dashboard = () => {
+const PageDashboard = () => {
   return (
     <Box>
       <HeadPage title={'FoodNas-Dashboard'} content={'dashboard'} key={'foodnas-dashboard'} />
@@ -30,4 +30,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default PageDashboard;

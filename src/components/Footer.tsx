@@ -1,5 +1,4 @@
-import { Box, Card, Container, Typography } from '@mui/material';
-import React from 'react';
+import { Box, Card, Typography } from '@mui/material';
 
 const Footer = () => {
   return (
@@ -7,9 +6,8 @@ const Footer = () => {
       <Box sx={{ display: 'flex', justifyContent: 'center' }}>
         <Box>
           <Typography variant="h6" gutterBottom>
-            Feito por Esio Rodrigues da Silva Nascimento
+            Feito por Esio Rodrigues da Silva Nascimento - 2022
           </Typography>
-          <Typography variant="body1">2022</Typography>
         </Box>
       </Box>
     </Card>
