@@ -1,6 +1,6 @@
 import { HeadPage } from '@Components/Head';
 import { Box, Container } from '@mui/material';
-import { Footer } from '@Components/Footer';
+import { Footer } from '@Components/Footer/Footer';
 import { ComponentNavbar } from '@Components/Navbar';
 import { configNavbarTabs } from '@Config/dashboard/index';
 import Grid2 from '@mui/material/Unstable_Grid2';
@@ -8,7 +8,7 @@ import Grid2 from '@mui/material/Unstable_Grid2';
 const Dashboard = () => {
   return (
     <Box>
-      <HeadPage title={'FoodNas-Dashboard'} content={'dashboard'} key={'foodnas-dashboard'} />
+      <HeadPage title={'FoodNas-Dashboard'} content={'dashboard'} />
       <Container maxWidth={false}>
         <Box>
           <ComponentNavbar pages={configNavbarTabs} />
