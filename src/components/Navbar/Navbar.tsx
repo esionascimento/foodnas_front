@@ -1,10 +1,15 @@
+import React from 'react';
+// @mui
+import Brightness4Icon from '@mui/icons-material/Brightness4';
+import Brightness7Icon from '@mui/icons-material/Brightness7';
 import MenuIcon from '@mui/icons-material/Menu';
-import { Button } from '@mui/material';
+import { Button, useTheme } from '@mui/material';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
 import { styled } from '@mui/material/styles';
 import Toolbar from '@mui/material/Toolbar';
+// next
 import Link from 'next/link';
 import { TypesConfigNavbar } from 'src/@types/dashboard';
 
@@ -58,7 +63,16 @@ const RootStyle = styled(AppBar, {
   // },
 }));
 
+const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
+
 const ComponentNavbar = ({ pages }: Props) => {
+  const theme = useTheme();
+  const {
+    palette: { mode },
+  } = theme;
+  console.log('mode: ', mode);
+  const colorMode = React.useContext(ColorModeContext);
+
   return (
     <AppBar component="nav">
       <Toolbar>
@@ -69,6 +83,9 @@ const ComponentNavbar = ({ pages }: Props) => {
             </Link>
           ))}
         </Box>
+        <IconButton sx={{ ml: 1 }} onClick={colorMode.toggleColorMode} color="inherit">
+          {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
+        </IconButton>
         <Box sx={{ flexGrow: 0, display: { xs: 'flex', md: 'none' } }}>
           <IconButton
             size="large"

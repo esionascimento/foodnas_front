@@ -20,20 +20,31 @@ export default function PageDashboard() {
           <ComponentNavbar pages={configNavbarTabs} />
         </Box>
         <Box>
-          <Grid2 container spacing={{ mobile: 1, tablet: 2, laptop: 3 }} sx={{ border: '1px solid red' }}>
-            <Grid2 mobile={6} tablet={4} laptop={3}>
+          <Grid2 container spacing={1} sx={{ border: '1px solid red' }}>
+            <Grid2 xs={6} sm={6} md={3}>
               <Paper>
                 <Box>Entrada</Box>
                 <Box>R$</Box>
               </Paper>
             </Grid2>
-            <Grid2 mobile={6} tablet={4} laptop={3}>
+            <Grid2 xs={6} sm={6} md={3}>
               <Paper>
                 <Box>Saída</Box>
                 <Box>R$</Box>
               </Paper>
             </Grid2>
-
+            <Grid2 xs={6} sm={6} md={3}>
+              <Paper>
+                <Box>Saída</Box>
+                <Box>R$</Box>
+              </Paper>
+            </Grid2>
+            <Grid2 xs={6} sm={6} md={3}>
+              <Paper>
+                <Box>Saída</Box>
+                <Box>R$</Box>
+              </Paper>
+            </Grid2>
             {/* {Array.from(Array(8)).map((_, index) => (
               <Grid2 mobile={6} tablet={4} laptop={3} key={index}>
                 <div>{index + 1}</div>
